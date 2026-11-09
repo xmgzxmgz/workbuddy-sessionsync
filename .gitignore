@@ -1,0 +1,18 @@
+# 运行时数据（包含真实对话，绝不能提交）
+data/
+.env
+
+# 日志
+*.log
+npm-debug.log*
+
+# 依赖
+node_modules/
+
+# 系统
+.DS_Store
+Thumbs.db
+
+# 本地工具产物
+.workbuddy/
+*.genie

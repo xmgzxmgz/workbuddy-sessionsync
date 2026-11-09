@@ -1,0 +1,13 @@
+services:
+  sessionsync:
+    build: .
+    container_name: sessionsync
+    restart: unless-stopped
+    ports:
+      - "8787:8787"
+    volumes:
+      - ./data:/data
+      - ./public:/app/public
+    environment:
+      # 访问令牌：在同目录 .env 中设置 ACCESS_TOKEN=xxx（勿提交到仓库）
+      - ACCESS_TOKEN=${ACCESS_TOKEN:-change-me-please}
