@@ -1,10 +1,11 @@
 <div align="center">
 
-# SessionSync
+# WorkBuddy SessionSync
 
 **Self-hosted archive &amp; real-time sync for your AI chat sessions.**
 Conversations, generated files and long-term memories — one private cloud, every device.
 
+[![CI](https://github.com/xmgzxmgz/workbuddy-sessionsync/actions/workflows/ci.yml/badge.svg)](https://github.com/xmgzxmgz/workbuddy-sessionsync/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-3b6ef5.svg)](LICENSE)
 [![Node.js](https://img.shields.io/badge/Node.js-%E2%89%A518-16a67b.svg)](https://nodejs.org)
 [![Zero Dependencies](https://img.shields.io/badge/dependencies-0-4a6cf7.svg)](#)
@@ -76,8 +77,8 @@ AI assistants are where a growing share of real work happens — but the history
 ## Quick start
 
 ```bash
-git clone https://github.com/xmgzxmgz/sessionsync.git
-cd sessionsync
+git clone https://github.com/xmgzxmgz/workbuddy-sessionsync.git
+cd workbuddy-sessionsync
 node server.mjs            # → http://localhost:8787
 ```
 

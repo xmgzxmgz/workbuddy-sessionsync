@@ -10,6 +10,7 @@ ENV PORT=8787 \
 EXPOSE 8787
 VOLUME ["/data"]
 # 健康检查：根路径返回控制台页面（无需令牌）
+# 注意：用 127.0.0.1 而非 localhost（Alpine 下 localhost 可能先解析到 IPv6）
 HEALTHCHECK --interval=60s --timeout=5s --retries=3 \
-  CMD wget -qO- http://localhost:8787/ > /dev/null 2>&1 || exit 1
+  CMD wget -q -O /dev/null http://127.0.0.1:8787/ || exit 1
 CMD ["node", "server.mjs"]

@@ -421,7 +421,7 @@ const server = http.createServer(async (req, res) => {
         const id = body.id || uuid();
         const { applied } = store.commit({
           op_id: body.op_id, device: dev.name, entity: 'session', id, ts: now(),
-          data: { title: body.title, tags: body.tags || [], summary: body.summary || '', source: body.source || dev.name || 'api', status: body.status || 'active' },
+          data: { title: body.title, tags: body.tags || [], summary: body.summary || '', space: body.space || '', source: body.source || dev.name || 'api', status: body.status || 'active' },
         });
         return json(res, 201, { applied, session: store.sessionDerived(store.state.sessions.get(id)) });
       }
@@ -446,6 +446,7 @@ const server = http.createServer(async (req, res) => {
             tags: body.tags ?? s.tags,
             summary: body.summary ?? s.summary,
             source: body.source ?? s.source,
+            space: body.space ?? s.space,
             status: body.status ?? s.status,
             created_at: s.created_at,
           },

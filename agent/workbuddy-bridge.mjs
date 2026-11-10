@@ -148,6 +148,7 @@ if (args.session) {
     SELECT id,title,custom_title,cwd,created_at,updated_at,status,model,mode
     FROM sessions
     WHERE deleted_at IS NULL AND COALESCE(transport,'local') = 'local' AND COALESCE(is_playground,0) = 0
+      AND COALESCE(is_background_automation,0) = 0   -- 后台自动化任务的运行会话不入库
     ORDER BY updated_at DESC
   `).all();
 }

@@ -1,10 +1,11 @@
 <div align="center">
 
-# SessionSync
+# WorkBuddy SessionSync
 
 **自托管的 AI 会话归档与实时同步系统**
 对话、生成的文件、长期记忆 —— 一个私有云，所有设备可见。
 
+[![CI](https://github.com/xmgzxmgz/workbuddy-sessionsync/actions/workflows/ci.yml/badge.svg)](https://github.com/xmgzxmgz/workbuddy-sessionsync/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-3b6ef5.svg)](LICENSE)
 [![Node.js](https://img.shields.io/badge/Node.js-%E2%89%A518-16a67b.svg)](https://nodejs.org)
 [![Zero Dependencies](https://img.shields.io/badge/dependencies-0-4a6cf7.svg)](#)
@@ -73,8 +74,8 @@ AI 助手正在承载越来越多真实工作，但对话记录往往锁在单�
 ## 快速开始
 
 ```bash
-git clone https://github.com/xmgzxmgz/sessionsync.git
-cd sessionsync
+git clone https://github.com/xmgzxmgz/workbuddy-sessionsync.git
+cd workbuddy-sessionsync
 node server.mjs            # → http://localhost:8787
 ```
 
