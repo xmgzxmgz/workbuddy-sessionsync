@@ -1,0 +1,7 @@
+data/
+docs/
+.git/
+.gitignore
+*.log
+.env
+.DS_Store
