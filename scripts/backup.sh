@@ -1,11 +1,11 @@
 #!/bin/sh
 # 每日快照备份：rsync --link-dest 增量快照，保留最近 N 份（默认 14）
 # 用法：backup.sh [源目录] [备份根目录]
-# 默认值适配极空间部署；其他机器可用环境变量覆盖：
+# 默认值只做占位，部署时用环境变量或参数覆盖：
 #   SRC=/path/to/data DEST=/backup/sessionsync KEEP=14 ./backup.sh
 set -eu
 
-SRC="${1:-${SRC:-/data_n005/data/udata/real/redacted/Docker_compose/sessionsync/data}}"
+SRC="${1:-${SRC:-./data}}"
 DEST="${2:-${DEST:-/data_s003/backups/sessionsync}}"
 KEEP="${KEEP:-14}"
 STAMP=$(date +%Y%m%d-%H%M%S)
